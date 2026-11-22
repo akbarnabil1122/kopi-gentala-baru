@@ -24,7 +24,7 @@
                         <button type="submit" class="link-tombol">Keluar</button>
                     </form>
                 @endauth
-                <a href="#" aria-label="Keranjang">
+                <a href="{{ route('keranjang.index') }}" aria-label="Keranjang">
                     <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h9.2L19 7H6.2"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg>
                 </a>
                 <a href="{{ auth('pelanggan')->check() ? '#' : route('login') }}" aria-label="Akun">
