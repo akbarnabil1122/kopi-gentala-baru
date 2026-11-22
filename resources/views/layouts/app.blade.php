@@ -27,7 +27,7 @@
                 <a href="{{ route('keranjang.index') }}" aria-label="Keranjang">
                     <svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h9.2L19 7H6.2"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg>
                 </a>
-                <a href="{{ auth('pelanggan')->check() ? '#' : route('login') }}" aria-label="Akun">
+                <a href="{{ route('akun') }}" aria-label="Akun">
                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c1.2-2.4 3-3.5 5.5-3.5s4.3 1.1 5.5 3.5"/></svg>
                 </a>
             </nav>
