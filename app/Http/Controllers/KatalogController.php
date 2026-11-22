@@ -15,4 +15,20 @@ class KatalogController extends Controller
 
         return view('beranda', compact('produk'));
     }
+
+    public function index()
+    {
+        $produk = Produk::where('status_aktif', true)
+            ->orderBy('id_produk')
+            ->get();
+
+        return view('katalog.index', compact('produk'));
+    }
+
+    public function detail(Produk $produk)
+    {
+        abort_unless($produk->status_aktif, 404);
+
+        return view('katalog.detail', compact('produk'));
+    }
 }
