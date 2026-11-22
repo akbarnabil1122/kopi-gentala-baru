@@ -51,3 +51,15 @@ footer li { list-style: none; }
   .nav-links { gap: 14px; font-size: .9rem; }
   .hero h1 { font-size: 2.2rem; }
 }
+.form-auth { max-width: 420px; margin: 50px auto; background: var(--putih-gading); border: 1px solid var(--pasir); border-radius: 12px; padding: 32px; }
+.form-auth h2 { font-size: 2rem; margin-bottom: 18px; }
+.form-auth label { display: block; font-weight: 500; margin: 14px 0 6px; }
+.form-auth input { width: 100%; padding: 12px; border: 1px solid #bbb; border-radius: 8px; font: inherit; background: #fff; }
+.form-auth input:focus { outline: 2px solid var(--pasir); border-color: var(--cokelat-tua); }
+.form-auth .tombol { width: 100%; border: 0; cursor: pointer; margin-top: 22px; font: inherit; }
+.form-auth .alt { text-align: center; margin-top: 18px; font-size: .95rem; }
+.galat { background: #fdecea; color: #a12622; border-radius: 8px; padding: 10px 12px; margin-bottom: 6px; font-size: .92rem; }
+.galat-kecil { color: #a12622; font-size: .85rem; }
+.notif { background: var(--krem); color: var(--cokelat-tua); text-align: center; padding: 12px; border-bottom: 1px solid var(--pasir); }
+.link-tombol { background: none; border: 0; color: #fff; cursor: pointer; font: inherit; }
+.link-tombol:hover { color: var(--pasir); }
