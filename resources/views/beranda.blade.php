@@ -43,7 +43,7 @@
 <section class="blok" id="produk">
     <div class="container">
         <h2 class="judul">PRODUK KAMI</h2>
-        <div class="grid grid-3">
+        <div class="grid grid-2">
             @forelse ($produk as $p)
                 <div class="kartu">
                     <div class="produk-gambar">

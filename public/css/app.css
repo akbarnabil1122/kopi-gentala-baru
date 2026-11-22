@@ -63,3 +63,6 @@ footer li { list-style: none; }
 .notif { background: var(--krem); color: var(--cokelat-tua); text-align: center; padding: 12px; border-bottom: 1px solid var(--pasir); }
 .link-tombol { background: none; border: 0; color: #fff; cursor: pointer; font: inherit; }
 .link-tombol:hover { color: var(--pasir); }
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
+@media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
