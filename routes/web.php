@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\PembayaranController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [KatalogController::class, 'beranda'])->name('beranda');
@@ -23,4 +25,9 @@ Route::middleware('auth:pelanggan')->group(function () {
     Route::post('/keranjang', [KeranjangController::class, 'tambah'])->name('keranjang.tambah');
     Route::patch('/keranjang/{keranjang}', [KeranjangController::class, 'ubah'])->name('keranjang.ubah');
     Route::delete('/keranjang/{keranjang}', [KeranjangController::class, 'hapus'])->name('keranjang.hapus');
+
+    Route::get('/checkout', [CheckoutController::class, 'form'])->name('checkout');
+    Route::post('/checkout', [CheckoutController::class, 'simpan'])->name('checkout.simpan');
+
+    Route::get('/pembayaran/{pesanan}', [PembayaranController::class, 'tampil'])->name('pembayaran.tampil');
 });
