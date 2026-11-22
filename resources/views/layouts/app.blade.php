@@ -15,7 +15,7 @@
             <nav class="nav-links">
                 <a href="{{ route('beranda') }}">Beranda</a>
                 <a href="{{ route('beranda') }}#profil">Profil</a>
-                <a href="{{ route('beranda') }}#produk">Produk</a>
+                <a href="{{ route('produk.index') }}">Produk</a>
                 <a href="#kontak">Kontak</a>
                 @auth('pelanggan')
                     <span>Halo, {{ \Illuminate\Support\Str::words(auth('pelanggan')->user()->nama_pelanggan, 1, '') }}</span>
@@ -53,7 +53,7 @@
                     <ul>
                         <li><a href="{{ route('beranda') }}">Beranda</a></li>
                         <li><a href="{{ route('beranda') }}#profil">Profil</a></li>
-                        <li><a href="{{ route('beranda') }}#produk">Produk</a></li>
+                        <li><a href="{{ route('produk.index') }}">Produk</a></li>
                     </ul>
                 </div>
                 <div>

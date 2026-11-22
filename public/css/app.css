@@ -66,3 +66,27 @@ footer li { list-style: none; }
 
 .grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
 @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.kartu h3 a:hover { color: var(--cokelat); }
+a.produk-gambar { display: flex; }
+.kembali { display: inline-block; margin-bottom: 20px; color: var(--cokelat-tua); font-weight: 500; }
+.kembali:hover { color: var(--cokelat); }
+.detail-produk { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.detail-gambar { background: var(--pasir); border-radius: 12px; min-height: 340px; display: flex; align-items: center; justify-content: center; color: var(--cokelat-tua); overflow: hidden; }
+.detail-gambar img { width: 100%; height: 100%; object-fit: cover; }
+.detail-info h1 { font-size: 2.2rem; margin-bottom: 6px; }
+.harga-besar { font-size: 1.6rem; font-weight: 600; margin-bottom: 14px; }
+.spesifikasi { list-style: none; margin-bottom: 18px; }
+.spesifikasi li { padding: 3px 0; }
+.stepper { display: inline-flex; border: 1px solid var(--cokelat-tua); border-radius: 8px; overflow: hidden; margin-bottom: 18px; }
+.stepper button { background: #fff; border: 0; width: 40px; font-size: 1.2rem; cursor: pointer; color: var(--cokelat-tua); }
+.stepper button:hover { background: var(--krem); }
+.stepper input { width: 60px; text-align: center; border: 0; border-left: 1px solid var(--cokelat-tua); border-right: 1px solid var(--cokelat-tua); font: inherit; padding: 8px 0; -moz-appearance: textfield; }
+.stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.aksi { display: flex; gap: 12px; flex-wrap: wrap; }
+.aksi .tombol, .tombol-garis { border: 1px solid var(--cokelat-tua); cursor: pointer; font: inherit; }
+.tombol-garis { background: #fff; color: var(--cokelat-tua); padding: 10px 26px; border-radius: 8px; font-weight: 500; }
+.tombol-garis:hover { background: var(--krem); }
+.deskripsi-kotak { margin-top: 40px; background: var(--putih-gading); border: 1px solid var(--pasir); border-radius: 12px; padding: 24px; }
+.deskripsi-kotak h3 { font-size: 1.4rem; margin-bottom: 8px; }
+@media (max-width: 800px) { .detail-produk { grid-template-columns: 1fr; } }

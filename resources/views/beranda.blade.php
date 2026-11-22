@@ -57,8 +57,8 @@
                     <p>{{ $p->deskripsi }}</p>
                     <p>Berat: {{ $p->ukuran_kemasan }} gr</p>
                     <p class="harga">Harga: Rp{{ number_format($p->harga, 0, ',', '.') }}</p>
-                    {{-- Tautan Beli ke halaman detail diisi di Langkah 7 --}}
-                    <a href="#" class="tombol">Beli</a>
+                    
+                    <a href="{{ route('produk.detail', $p) }}" class="tombol">Beli</a>
                 </div>
             @empty
                 <p class="teks-tengah">Produk belum tersedia.</p>

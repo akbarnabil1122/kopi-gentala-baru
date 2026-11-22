@@ -5,6 +5,8 @@ use App\Http\Controllers\KatalogController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [KatalogController::class, 'beranda'])->name('beranda');
+Route::get('/produk', [KatalogController::class, 'index'])->name('produk.index');
+Route::get('/produk/{produk}', [KatalogController::class, 'detail'])->name('produk.detail');
 
 Route::middleware('guest:pelanggan')->group(function () {
     Route::get('/daftar', [AuthController::class, 'formDaftar'])->name('daftar');
