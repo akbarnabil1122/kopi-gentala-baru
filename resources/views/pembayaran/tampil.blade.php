@@ -47,6 +47,7 @@
 
             <div class="aksi">
                 <a href="https://wa.me/{{ config('kopigentala.whatsapp') }}?text={{ urlencode($pesanWa) }}" target="_blank" rel="noopener" class="tombol">Konfirmasi via WhatsApp</a>
+                <a href="{{ route('akun') }}" class="tombol-garis">Lihat Pesanan Saya</a>
                 <a href="{{ route('beranda') }}" class="tombol-garis">Kembali ke Beranda</a>
             </div>
         </div>
