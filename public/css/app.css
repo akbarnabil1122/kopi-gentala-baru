@@ -108,3 +108,32 @@ a.produk-gambar { display: flex; }
   .mini-gambar { width: 56px; height: 56px; }
   .subtotal-item { text-align: left; }
 }
+
+.checkout-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: start; }
+.panel { background: var(--putih-gading); border: 1px solid var(--pasir); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+.panel h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.panel .sub-judul { margin-top: 26px; }
+.panel label { display: block; font-weight: 500; margin: 12px 0 6px; }
+.panel input[type="text"], .panel input[type="email"], .panel input[type="tel"], .panel textarea { width: 100%; padding: 11px; border: 1px solid #bbb; border-radius: 8px; font: inherit; background: #fff; }
+.panel input[readonly] { background: #eee; color: #666; }
+.panel textarea { resize: vertical; }
+.dua-kolom { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.opsi-grup { display: flex; flex-direction: column; gap: 10px; }
+.panel label.opsi { display: flex; align-items: center; gap: 10px; margin: 0; padding: 12px 14px; border: 1px solid var(--pasir); border-radius: 8px; background: #fff; cursor: pointer; }
+.opsi small { display: block; color: #777; font-size: .82rem; }
+.opsi-mati { opacity: .55; cursor: not-allowed !important; }
+.baris-ringkasan { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--pasir); }
+.baris-ringkasan .mini-gambar { width: 56px; height: 56px; }
+.baris-ringkasan p { font-size: .9rem; }
+.kanan { font-weight: 600; text-align: right; }
+.rincian { margin: 14px 0; }
+.rincian > div { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; }
+.rincian .total { border-top: 1px solid var(--cokelat-tua); margin-top: 6px; padding-top: 10px; font-weight: 700; font-size: 1.1rem; }
+.tombol-penuh { width: 100%; border: 0; cursor: pointer; font: inherit; text-align: center; }
+.panel-qris { text-align: center; }
+.qris { display: block; max-width: 280px; width: 100%; margin: 16px auto; border-radius: 8px; }
+.qris.kosong { background: var(--pasir); padding: 40px 16px; color: var(--cokelat-tua); }
+.langkah-bayar { text-align: left; max-width: 520px; margin: 14px auto 20px; padding-left: 20px; }
+.panel-qris .aksi { justify-content: center; }
+a.tombol-garis { display: inline-block; }
+@media (max-width: 800px) { .checkout-grid, .dua-kolom { grid-template-columns: 1fr; } }
