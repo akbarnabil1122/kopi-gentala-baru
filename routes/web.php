@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\KatalogController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [KatalogController::class, 'beranda'])->name('beranda');
