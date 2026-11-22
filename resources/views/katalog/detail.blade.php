@@ -27,18 +27,26 @@
                     <li>Jumlah Stok: <strong>{{ $produk->stok }}</strong></li>
                 </ul>
 
-                @if ($produk->stok > 0)
-                    <div class="stepper">
-                        <button type="button" id="kurang" aria-label="Kurangi">&minus;</button>
-                        <input type="number" id="jumlah" value="1" min="1" max="{{ $produk->stok }}">
-                        <button type="button" id="tambah" aria-label="Tambah">+</button>
-                    </div>
+                @if ($errors->any())
+                    <div class="galat">{{ $errors->first() }}</div>
+                @endif
 
-                    {{-- Fungsi kedua tombol ini diaktifkan di Langkah 8 (keranjang) --}}
-                    <div class="aksi">
-                        <button type="button" class="tombol">Pesan Sekarang</button>
-                        <button type="button" class="tombol-garis">Keranjang</button>
-                    </div>
+                @if ($produk->stok > 0)
+                    <form method="POST" action="{{ route('keranjang.tambah') }}">
+                        @csrf
+                        <input type="hidden" name="id_produk" value="{{ $produk->id_produk }}">
+
+                        <div class="stepper">
+                            <button type="button" id="kurang" aria-label="Kurangi">&minus;</button>
+                            <input type="number" name="jumlah" id="jumlah" value="1" min="1" max="{{ $produk->stok }}">
+                            <button type="button" id="tambah" aria-label="Tambah">+</button>
+                        </div>
+
+                        <div class="aksi">
+                            <button type="submit" name="langsung" value="1" class="tombol">Pesan Sekarang</button>
+                            <button type="submit" class="tombol-garis">Keranjang</button>
+                        </div>
+                    </form>
                 @else
                     <p class="galat">Stok produk ini sedang habis.</p>
                 @endif
